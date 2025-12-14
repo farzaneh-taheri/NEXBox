@@ -1,12 +1,11 @@
 /* =========================
    Hero Section ساده – Home Page
    ========================= */
-
 .hero {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 60px 20px;
+  padding: 40px 20px;
 }
 
 .hero-poster img {
@@ -33,4 +32,157 @@
   .hero-poster img.active {
     display: block;
   }
+}
+
+/* ===== Category Section (Flex) ===== */
+.category-section {
+  padding: 0;
+  direction: rtl;
+  margin: 0 63px;
+}
+
+.section-title {
+  color: #696969;
+  margin-top: 0;
+  margin-bottom: 24px;
+}
+
+.category-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+}
+
+.category-card {
+  width: 250px;
+  height: 168px;
+  background: #e0e0e0;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.category-card img {
+  width: 70%;
+  height: auto;
+  object-fit: contain;
+}
+
+.category-card:hover {
+  transform: translateY(-6px);
+  background: #d6d6d6;
+}
+
+/* واکنش‌گرایی موبایل */
+@media (max-width: 768px) {
+  .category-section {
+    margin: 0 14px;
+    padding: 0;
+  }
+
+  .category-card {
+    width: 80px;
+    height: 80px;
+    border-radius: 8px;
+  }
+}
+
+/* ===== Latest Products ===== */
+.latest-products {
+  background-image: url("../../images/mascot.png");
+  background-repeat: no-repeat;
+  background-position: center right;
+  background-size: cover;
+  position: relative;
+  margin-top: 60px;
+  direction: rtl;
+  height: 52vh;
+  right: 62px;
+}
+
+.latest-title {
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.product-slider {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  margin-right: 337px;
+  padding-top: 142px;
+}
+
+.product-card {
+  min-width: 250px;
+  background: #e0e0e0;
+  border-radius: 16px;
+  height: 326px;
+}
+
+/* Mascot */
+.mascot {
+  position: absolute;
+  right: 30px;
+  bottom: 20px;
+}
+
+.mascot img {
+  width: 100px;
+}
+
+/* واکنش‌گرایی موبایل */
+@media (max-width: 768px) {
+  .latest-products {
+    height: 164px;
+    right: 12px;
+  }
+  .product-slider {
+    margin-right: 90px;
+    padding-top: 20px;
+    gap: 16px;
+  }
+  .product-card {
+    min-width: 85px;
+    height: 112px;
+  }
+
+  .product-card img {
+    height: 20px;
+  }
+
+  .product-info h4 {
+    font-size: 12px;
+  }
+
+  .product-info .price {
+    font-size: 10px;
+  }
+  button {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+}
+
+/* دسته‌بندی و محصولات هر دو فلکس افقی و scrollable */
+.category-list,
+.product-slider {
+  overflow-x: auto;
+  display: flex;
+  gap: 20px;
+  cursor: grab;
+  scroll-behavior: smooth;
+}
+
+.dragging {
+  cursor: grabbing;
+}
+
+.category-list::-webkit-scrollbar,
+.product-slider::-webkit-scrollbar {
+  display: none;
 }
