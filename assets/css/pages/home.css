@@ -14,6 +14,9 @@
   margin: 0 auto;
   height: auto;
   border-radius: 16px; /* اختیاری برای گوشه‌های نرم */
+  display: none;
+}
+.hero-poster img.active {
   display: block;
 }
 
@@ -25,5 +28,9 @@
 
   .hero-poster img {
     max-width: 100%;
+  }
+
+  .hero-poster img.active {
+    display: block;
   }
 }
