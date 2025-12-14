@@ -1,0 +1,29 @@
+/* =========================
+   Hero Section ساده – Home Page
+   ========================= */
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 20px;
+}
+
+.hero-poster img {
+  max-width: 90%;
+  margin: 0 auto;
+  height: auto;
+  border-radius: 16px; /* اختیاری برای گوشه‌های نرم */
+  display: block;
+}
+
+/* واکنش‌گرایی موبایل */
+@media (max-width: 768px) {
+  .hero {
+    padding: 40px 16px;
+  }
+
+  .hero-poster img {
+    max-width: 100%;
+  }
+}
