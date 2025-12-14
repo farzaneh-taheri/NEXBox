@@ -11,4 +11,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderLatestProducts("latestProducts", 5);
   enableDragScroll("categorySlider"); // دسته‌بندی
   enableDragScroll("latestProducts"); // محصولات
+  enableDragScroll("discountSlider"); // تخفیف‌ها
 });
